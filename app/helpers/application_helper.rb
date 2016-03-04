@@ -15,6 +15,10 @@ module ApplicationHelper
     end
   end
 
+  def icon_tag(icon_class)
+    render :partial => 'shared/icon_tag', :locals => {:icon_class => icon_class}
+  end
+
   def no_printer
     [{:name=>'No printer found',:uuid=>nil}]
   end
